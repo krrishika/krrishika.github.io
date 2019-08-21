@@ -1,142 +1,115 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-	<title>Examen Práctico uf-1304</title>
+<title>Actividad Evaluable E3-UF1306</title>
+
+<!-- Enlaces a las librerías Jquery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="jquery/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="jquery/jquery-ui.theme.min.css">
+
+<!-- Enlace al archivo Javascript con mi función-->
+<script type="text/javascript" src="js/codigo.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+<div id="main">
 
-<div id="header">
-		<ul id="menu">
-	<li><i class="fas fa-hotel fa-2x " style="color: red;"></i></li>
-
-		<li><a href="#">Habitaciones</a></li>
-		<li><a href="#">Acerca de </a></li>
-		<li><a href="contacto.html">Contacto</a></li>
-	</ul>
-
-<div>
-	<div class="main">
-		<div class="texto">
-		<h4>Encuentra tu Hotel Ideal</h4>
-
-		</div>
-	</div>
-	</div>
+<button id="button_fecha" class="button" onclick="verHora()">VER HORA actual</button>
+<div id="ver_mensaje"></div>
+<!--<button id="button_fecha" class="button" onclick="ocultarHora()">OCULTAR HORA ACTUAL</button>-->
+<button id="button_ocultarHora" class="button" onclick="ocultarHora()">OCULTAR HORA</button>
+<div id="ver_mensaje"></div>
 </div>
 
+<hr>
+<h1>¿A qué generación perteneces?</h1>
+<p>La base de toda estrategia de marketing es identificar nuestro nicho de mercado, conocer a nuestro público, ya que, tenemos que tener en cuenta que las tendencias globales afectan a la mentalidad y al comportamiento de nuestro target, provocando un cambio en la manera en que compran.
+<p>Una forma de segmentar es a través de las generaciones realizado por Kotler y Keller en 2002. En un principio, esta segmentación se realizaba en base a elementos económicos y culturales. Hoy en día, esta segmentación se basa en la edad o generación a la que pertenecen las personas.</p>
+<p>Actualmente, existen 4 generaciones dependiendo de la edad:
+<ul>
+	<li><strong>Generación sin nombre:</strong> antes de 1945.</li>
+	<li><strong>Generación Baby Boomers:</strong> entre 1946 y 1964</li>
+	<li><strong>Generación X:</strong> entre 1965 y 1979</li>
+	<li><strong>Generación Millenials:</strong> entre 1980 y 1999</li>
+	<li><strong>Generación Z:</strong> entre el 2000 en adelante.</li>
+</ul>
+<p><img src="img/infografia-generaciones.gif"></p>
+<p>Introduce tus datos y sabrás a qué generación perteneces</p>
 
-<div class="grid-container">
-	<div class="left">
+<div class="calcular_edad">
+<form id="form1">
+<label for="nombre">Escribe tu nombre</label>
+<input type="text" id="nombre">
+<p id="errorNombre"></p>
 
-	<img src="img/room_single.jpg" width="100%" height="auto" alt="imagen del room_single">
+<label for="nacimiento">¿En qué año naciste?</label>
+<input type="text" id="nacimiento">
+<p id="errorAnyo"></p>
 
-	<div class="text1">
-		<h4>Habitación Simple</h4>
-		<p style="color: red;">Desde 85€</p>
-		<p>Una cama</p>
-		<p>15m2</p>
-		<i class="fas fa-bath"></i>
-		<i class="fas fa-phone-square"></i>
-		<i class="fas fa-wifi"></i>	
-	</div>
-	<div class="select1">
-		<p>Elige tu habitación</p>
-	</div>
+<button type="button" id="boton_calcular_edad" onclick="calcularGeneracion()">Calcular edad</button>
+</form>
+</div>
 
-	</div>
-
-
-<div class="middle">
-	<figure>
-	<img src="img/room_double.jpg" width="100%" height="auto" alt="imagen del room_double">
-	</figure>
-
-	<div class="text2">
-		<h4>Habitación Doble</h4>
-		<p style="color: red;">Desde 150€</p>
-		<p>Cama gran tamaño</p>
-		<p>25m2</p>
-		<i class="fas fa-bath"></i>
-		<i class="fas fa-phone-square"></i>
-		<i class="fas fa-wifi"></i>	
-		<i class="fas fa-tv"></i>
-
-		<div class="select1">
-		<p>Elige tu habitación</p>
-		</div>
-
-	</div>
-	</div>
-
-<div class="right">
-	<img src="img/room_deluxe.jpg" width="100%" height="auto" alt="imagen del room_deluxe">
-	<div class="text3">
-	<h4>Habitación deluxe</h4>
-	<p style="color: red;">Desde 199€</p>
-	<p>Cama gran tamaño</p>
-	<p>40m2</p>
-	<i class="fas fa-bath"></i>
-		<i class="fas fa-phone-square"></i>
-		<i class="fas fa-wifi"></i>	
-		<i class="fas fa-tv"></i>
-		<i class="fas fa-cocktail"></i>
-		<i class="fas fa-utensils"></i>
-
-	<div class="select1">
-		<p>Elige tu habitación</p>
-		</div>
-		
-	</div>	
-	</div>
+<div id="txtSolucion"></div>
 
 </div>
 
-<!--Flex container-->
+<div id="conclusiones">
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Correcciones Javascript</a></li>
+  
+  
+  
+  
+    <li><a href="#tabs-2">Cambios Accesibilidad</a></li>
+    <li><a href="#tabs-3">Mejoras Usabilidad</a></li>
+  </ul>
+  <div id="tabs-1">
+    
+    <li> En head : A enlazar script el nombre de archivo estaba escrito src="js/codig.js, lo correcto es: src = "js/codigo.js</p>
+    </li>
+    <li>la función para ocultar hora: document.getElementById('ver_mensaje').style.display = "block"; , lo correcto es:
+  document.getElementById('ver-mensaje').style.display= "none"</li>
+  <li>en el patron anyoUsuario:
+  /^[0-9]{3}$/;, lo correcto es /^[0-9]{4}$/;</li>
+  <li>En la condición if todo_correcto)
+  document.getElementById('txtDolucion').innerHTML = "¡" + nombreusuario + ", perteneces a la... La variable nombreusuario debe escribir como : nombreUsuario</li>
 
-	<div class="flex-container">
 
-	<div class="left1">
-	<img src="img/cinqueterre.jpg" width="100%" height="auto" alt="imagen de cinqueterre">
-	<div class="bottomleft">Cinqueterre</div>
-	</div>
+  </div>
+  <div id="tabs-2">
+   <li>Para que la página sea navrgable yo corregí  la palabra codigo para enlazar el archivo javascript. Estaba escrito src= "codig.js"; lo correcto es: src="codigo.js.</li>
+   <li> La función ocultar fecha estaba mal puesta en javascript dice display= " block", yo corregí como display = "none".</li>
+   <li>Para que la página sea comprensible Yo corregí la fonciòn en javascript ('txtSolution').innertHTML = "¡" + la variable  nombreusuario estaba escrito usuario en miniscula, aunque lo correcto es nombreUsuario.</li>
+   <li>Para que la página sea transformable el patron anyoUsuario:/^[0-9]{3}$/; estaba puesto; lo correcto es: /^[0-9]{4}$/;.</li>
 
-		<div class="right1">
 
-			<div class="newyork">
-			<img src="img/newyork2.jpg" width="100%" height="auto" alt="imagen de newyork2">
-			<div class="bottomleft">New York</div>
-			
-			</div>
-			<div class="sanfran">
-			<img src="img/sanfran.jpg" width="100%" height="auto" alt="imagen de sanfran">
-			<div class="bottomleft">San Francisco</div>
+  </div>
+  <div id="tabs-3">
+    <li>Adquisition: Yo enlaze mí página bien que sea usable y visitan más usuarios.</li>
+    <li>Los cambios que hizo anteriorment sea visible
+    la hora actual y ocultar hora</li>
+    <li>Depende de año de nacimiento se mostará que generación pertenece.</li>
+    <li>
 
-			</div>
+  </div>
+</div>
 
-			<div class="pisa">
-			<img src="img/pisa.jpg" width="100%" height="auto" alt="imagen de pisa">
+</div>
 
-			<div class="bottomleft">Pisa</div>
-			</div>
 
-			<div class="paris">
-			<img src="img/paris.jpg" width="100%" height="auto" alt="imagen de paris">
-			<div class="bottomleft">Paris</div>
-			</div>
-		</div>
-	</div>
 
-	<div class="footer">
-		<p>Búsqanos en Redes Sociales</p>
-		<i class="fab fa-facebook-square"></i>
-		<i class="fab fa-instagram"></i>
-		<i class="fab fa-snapchat-square"></i>
-		<i class="fab fa-pinterest-square"></i>
-		<i class="fab fa-twitter-square"></i>
-		<i class="fab fa-linkedin-in"></i>
-	</div>
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
+
+</div>
+
 
 </body>
 </html>
